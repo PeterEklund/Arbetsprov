@@ -1,0 +1,73 @@
+.search-result-list {
+    color: $font-white;
+    background: linear-gradient($bg-biscay, $bg-chambray);
+    margin-bottom: 200px;
+
+    @include font-regular(40px);
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: $large) {
+            width: 1000px;
+            margin: auto;
+        }
+
+        li {
+            padding-left: 98px;
+            margin: 2px 0;
+            height: 108px;
+            line-height: 108px;
+            position: relative;
+            display: flex;
+
+            &:focus, &:hover {
+                background-color: $bg-easy-bay;
+            }
+
+            &:focus .remove, &:hover .remove {
+                left: inherit;
+                right: 0;
+            }
+        }
+    }
+
+    .title {
+        width: 45%;
+    }
+
+    .date {
+        @include font-bold(28px);
+    }
+
+    .remove {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        width: 108px;
+        height: 108px;
+        border: 0;
+        background-color: $bg-cosmic;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            margin: auto;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 8px solid $bg-white;
+            background: $bg-white url(../assets/svg/remove.svg) no-repeat center center;
+        }
+
+        &:focus {
+            left: inherit;
+            right: 0;
+        }
+    }
+}

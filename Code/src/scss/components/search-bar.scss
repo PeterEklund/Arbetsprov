@@ -1,0 +1,44 @@
+.search-bar {
+    margin: auto 61px;
+    position: relative;
+
+    @media screen and (min-width: $large) {
+        width: 1000px;
+        margin: auto;
+    }
+
+    input {
+        position: relative;
+        background-color: $bg-bali-hai;
+        color: $font-white;
+        border: 0;
+        width: 100%;
+        border-radius: 5px;
+        padding: 38px 0 38px 100px;
+
+        @include font-regular(40px);
+
+        &::placeholder {
+            color: $heather;
+        }        
+    }
+
+    &__icon {
+        width: 31px;
+        height: 31px;
+        position: absolute;
+        margin: auto;
+        left: 39px;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+
+        // Using a png img becouse outlines is missing in logo.svg from sketch export.
+        background: url(../assets/png/search.png) no-repeat 100% 100%;
+    }
+
+    &__autocomplete {
+        width: 100%;
+        background-color: red;
+    }
+}

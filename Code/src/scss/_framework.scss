@@ -1,0 +1,25 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(180deg, $prussian-blue, $bg-biscay, $bg-azure);
+    margin: 0;
+}
+
+header {
+    padding-top: 129px;
+    padding-bottom: 60px;
+}
+
+.logo {
+    width: 265px;
+    height: 67px;
+    margin: 0px auto 114px auto;
+    background: gray;
+
+    // Using a png img becouse outlines is missing in logo.svg from sketch export.
+    background: url(../assets/png/logo.png) no-repeat;
+
+}
